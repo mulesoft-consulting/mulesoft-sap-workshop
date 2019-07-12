@@ -1,6 +1,7 @@
 name: sap
 title: MuleSoft SAP Workshop
-version: dev
+version: 1.0
 nav:
 - modules/ROOT/nav.adoc
 - modules/module-one/nav.adoc
+- modules/database/nac.adoc
