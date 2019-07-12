@@ -6,7 +6,9 @@ endif::[]
 :idprefix:
 :idseparator: -
 
-This is version *{page-component-version}* of Module One in Component B.
+This is version *{page-component-version}* of Module One in Component B. Welcome to the SAp Workshop.
+
+image:logo.png[Company Logo]
 
 == Page source
 
