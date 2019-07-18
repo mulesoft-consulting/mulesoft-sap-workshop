@@ -1,0 +1,83 @@
+Home Page Content
+
+Welcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of guides that will provide you
+hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform.
+In order to complete these guides, you'll need a copy of Anypoint Studio 7.x which is free to download and install on your Windows, Mac, or Linux machine.
+
+You can click on any of the items below to get started or read up more about integration options with MuleSoft on the Overview page.
+
+Overview page - https://sites.google.com/view/mulesoft-sap-workshop/overview
+
+
+This guide will walk you through the process of connecting with an SAP Hana Database.
+
+This guide will walk you through connecting with SAP using the SAP Connector which leverages the SAP JCo Library.
+
+This guide provides a overview on how to connect to OData datasources such as endpoints exposed from SAP NetWeaver Gateway using the HTTP Connector.
+
+Reminder: The SAP Connector guide requires the use of your own SAP instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized Sandbox SAP.
+
+https://www.google.com/url?q=https%3A%2F%2Fidesremote.com%2F&sa=D&sntz=1&usg=AFQjCNFY3OCrpQ3zmUPgNNEabym_n5N6uQ  (check this idesremote.com link)
+
+
+
+Overview
+
+SAP is one of the most popular enterprise resource planning (ERP) solutions available on the market today. Businesses looking to fully harness the power of SAP often wish to integrate it with other applications such as client relationship management (CRM) applications, creating end-to-end processes across the applications, on-premise or in the cloud.
+
+With MuleSoft, customers can deliver integrations quickly, easily, and cost effectively in order to integrate SAP solutions with other systems in the enterprise using our library of connectors.
+
+SAP Integration & API Strategy
+There are a number of different design patterns that can be leveraged to integrate with SAP, the decision criteria for choosing one pattern over another include SAP development time, MuleSoft development time, NetWeaver Gateway risk assessment, and account maintenance/visibility.
+
+The most common technologies are IDoc, BAPI/RFM, file extracts, SAP Netweaver Gateway, and SOAP Web Services to integrate with SAP
+
+Method - Web Services
+
+Description - SAP Netweaver Gateway exposes data as REST or OData APIs.
+
+Approach -
+Use HTTP or OData Connector
+XML or JSON Data
+Mule can either connect from Anypoint VPC in CloudHub or be co-located near SAP instance.
+In the case where SAP exposes APIs to unlock the data, consuming the APIs from Mule flows would involve simply configuring a HTTP connector.
+No SAP jars/libraries are required
+In this scenario Mule serves as a simple HTTP proxy for the APIs, enforces authentication, policies (rate limiting/throttling etc..) and captures analytics.
+This approach is better fit for realtime and singular data.
+
+
+Method - BAPI / Remote Function Module
+
+Description  - Call SAP native API functions directly. Supports execution of BAPI functions over the RFC protocol (synchronous RFC, transactional RFC, queued RFC)
+
+Approach -
+Use SAP Connector, a SAP-certified Java connector that leverages the SAP Java Connector (JCo) and IDoc libraries
+Works with both R/3 and S/4
+XML Data
+Mule can either connect from Anypoint VPC in CloudHub or be co-located near SAP instance.
+
+
+
+Method
+Send IDoc to SAP
+
+Description - Intermediate documents in either standard or extended formats exchanged through SAP framework.
+
+Approach
+Use SAP Connector, a SAP-certified Java connector that leverages the SAP Java Connector (JCo) and IDoc libraries
+Works with both R/3 and S/4
+XML Data
+Mule can either connect from Anypoint VPC in CloudHub or be co-located near SAP instance.
+
+
+Method
+Receive IDoc from SAP
+
+Description = Intermediate documents in either standard or extended formats exchanged through SAP framework.
+
+approach
+Use SAP Connector, a SAP-certified Java connector that leverages the SAP Java Connector (JCo) and IDoc libraries
+Works with both R/3 and S/4
+XML Data
+Real time / event based
+Mule can either connect from Anypoint VPC in CloudHub or be co-located near SAP instance.
