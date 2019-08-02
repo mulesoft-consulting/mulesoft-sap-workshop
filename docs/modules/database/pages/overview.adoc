@@ -12,8 +12,7 @@ This guide shows how to connect to a SAP HANA Database using the MuleSoft Anypoi
 
 You will create a flow that uses the Database Connector and the JDBC Driver. Additionally you will learn how to pass in URL parameters to the SQL Query to select specific records from a table.
 
-1. Connect and select all from a table
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+== 1. Connect and select all from a table
 
 1.1	Open Studio and create a new Mule Project
 image:HANA1.1.png[]
@@ -103,7 +102,6 @@ Click on Test Connection to make sure the credentials are correct. If it returns
 
 image:HANA1.16.png[]
 
-
 (2) Click on Refresh Metadata to use DataSense on the table.
 
 (3) Once the metadata is refreshed, click on the Output tab and expand the Mule Message and Payload to see the metadata for the table.
@@ -117,7 +115,6 @@ image:HANA1.17.png[]
 1.18	In the Tranform Message properties tab, modify the DataWeave script to look like the following:
 image:HANA1.18.png[]
 
-
 %dw 2.0
 output application/json
 ---
@@ -126,8 +123,6 @@ payload
 1.19	On the canvas, right mouse click the canvas and select Run project workshop-database
 image:HANA1.19.png[]
 
-
-
 You can also click on the green circle in the navigation bar and select Run As > Mule Application
 image:HANA1.20.png[]
 
@@ -135,8 +130,7 @@ image:HANA1.20.png[]
 
 http://localhost:8081/records
 
-2. Pass a parameter to the SQL Query
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+== 2. Pass a parameter to the SQL Query
 
 2.1	Select the Select component to open the Mule Properties window. Modify the SQL Query Text field and add a ‘WHERE’ clause
 
@@ -152,11 +146,9 @@ In the Input Parameters field, enter in the following:
 2.3	Switch back  to Google Chrome and open the following URL:
 image:HANA2.3.png[]
 
-
 http://localhost:8082/records?id=2
 
-
-Additional Resources
+== Additional Resources
 ^^^^^^^^^^^^^^^^^^^^
 
 * MuleSoft Database Connector
@@ -169,4 +161,3 @@ https://www.sap.com/developer/tutorials/hana-setup-cloud.html
 https://caldocs.hana.ondemand.com/caldocs/help/Getting_started_HANA_Express.pdf
 * Connect to SAP HANA using JDBC
 https://www.sap.com/developer/tutorials/hxe-connect-hxe-using-jdbc.html
-
