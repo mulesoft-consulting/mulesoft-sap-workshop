@@ -17,7 +17,6 @@ You will create a flow that uses the Database Connector and the JDBC Driver. Add
 1.1	Open Studio and create a new Mule Project
 image:HANA1.1.png[]
 
-
 1.2	In the New Mule Project window, give the project a name (e.g. workshop-database), select a Runtime, and then click on Finish
 
 image:HANA1.2.png[]
@@ -149,7 +148,6 @@ image:HANA2.3.png[]
 http://localhost:8082/records?id=2
 
 == Additional Resources
-^^^^^^^^^^^^^^^^^^^^
 
 * MuleSoft Database Connector
 https://docs.mulesoft.com/connectors/db-connector-index

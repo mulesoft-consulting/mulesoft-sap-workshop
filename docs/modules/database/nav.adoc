@@ -1,1 +1,1 @@
-* xref:overview.adoc[Database]
+* xref:overview.adoc[SAP HANA Database]
