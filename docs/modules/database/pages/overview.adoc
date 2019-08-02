@@ -6,7 +6,7 @@ endif::[]
 :idprefix:
 :idseparator: -
 
-This is version *{page-component-version}* of Module One in Component B. Welcome to the SAp Workshop.
+This is version *{page-component-version}* of Module One in Component B. Welcome to the SAP Workshop.
 
 image:logo.png[Company Logo]
 
