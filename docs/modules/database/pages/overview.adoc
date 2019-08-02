@@ -1,4 +1,4 @@
-= Database Connectivity
+= SAP HANA Database Connectivity
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -7,29 +7,6 @@ endif::[]
 :idseparator: -
 
 This is version *{page-component-version}* of Module One in Component B. Welcome to the SAP Workshop.
-
-image:logo.png[Company Logo]
-
-== Page source
-
-This page is sourced from [.path]_demo-component-b/docs/modules/module-one/pages/overview.adoc_.
-
-== Cross reference syntax to target this page
-
-To create a cross reference *to this page from another page in Module One*, the xref syntax would be `\xref:overview.adoc[]`.
-
-To create a cross reference *to this page from a page in the ROOT module of Component B*, the xref syntax would be `\xref:module-one:overview.adoc[]`.
-
-=== Always target the latest version of this page
-
-To create a cross reference *to the latest version of this page from a page in Component A*, the xref syntax would be `\xref:component-b:module-one:overview.adoc[]`.
-
-=== Target a specific version of this page
-
-To create a cross reference *to version 1.0 of this page from a page in Component A*, the xref syntax would be `\xref:1.0@component-b:module-one:overview.adoc[]`.
-
-HANA Overview
-=============
 
 This guide shows how to connect to a SAP HANA Database using the MuleSoft Anypoint Studio7.x  and the Database Connector. This assumes you have access to a SAP HANA database for this guide. There is an instance that is referenced in this guide but connection information may have changed. Please refer to your instructor for more details.
 
@@ -141,7 +118,6 @@ image:HANA1.17.png[]
 image:HANA1.18.png[]
 
 
-
 %dw 2.0
 output application/json
 ---
@@ -155,16 +131,9 @@ image:HANA1.19.png[]
 You can also click on the green circle in the navigation bar and select Run As > Mule Application
 image:HANA1.20.png[]
 
-
 1.20	Switch to Google Chrome and open the following URL:
 
-
-
-
 http://localhost:8081/records
-
-
-
 
 2. Pass a parameter to the SQL Query
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -185,7 +154,6 @@ image:HANA2.3.png[]
 
 
 http://localhost:8082/records?id=2
-
 
 
 Additional Resources
