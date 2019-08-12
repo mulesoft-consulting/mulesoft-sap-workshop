@@ -12,6 +12,7 @@ pipeline {
             steps {
                 configFileProvider([configFile(fileId: "sap-workshop.yaml", replaceTokens: true, targetLocation: './sap-workshop.yaml')]) {
                     sh 'antora sap-workshop.yaml'
+                    sh 'rm -rf ./.cache/antora'
                 }
             }
         }
