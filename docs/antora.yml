@@ -3,6 +3,8 @@ title: MuleSoft SAP Workshop
 version: dev
 nav:
 - modules/ROOT/nav.adoc
-- modules/module-one/nav.adoc
+- modules/config/nav.adoc
+- modules/bapi/nav.adoc
+- modules/idoc/nav.adoc
 - modules/database/nav.adoc
 - modules/odata/nav.adoc

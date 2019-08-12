@@ -97,8 +97,8 @@ The most common technologies are IDoc, BAPI/RFM, file extracts, SAP Netweaver Ga
 * Mule can either connect from Anypoint VPC in CloudHub or be co-located near SAP instance.
 |=================================
 
-Other Considerations
-~~~~~~~~~~~~~~~~~~~~
+== Other Considerations
+
 * Current investment in BAPI and IDoc
 * NetWeaver Gateway direction
 * Managed system APIs in SAP
