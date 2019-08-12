@@ -16,7 +16,7 @@ You will create a flow that uses the Database Connector and the JDBC Driver. Add
 == 1. Connect and select all from a table
 
 1.1	Open Studio and create a new Mule Project
-image:{imagesdir}/HANA1.1.png[]
+image:../assets/images/HANA1.1.png[]
 
 1.2	In the New Mule Project window, give the project a name (e.g. workshop-database), select a Runtime, and then click on Finish
 
