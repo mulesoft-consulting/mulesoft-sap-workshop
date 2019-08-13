@@ -3,17 +3,11 @@ pipeline {
         label 'antora-asciidoc'
     }
     
-    environment {
-        AWS_CREDS = credentials('62c5e723-0bb8-4095-b1e1-9b07330c5c01')
-    }
-
     stages {
         stage('Build Site') {
             steps {
-                configFileProvider([configFile(fileId: "sap-workshop.yaml", replaceTokens: true, targetLocation: './sap-workshop.yaml')]) {
                     sh 'antora --fetch sap-workshop.yaml'
                 }
-            }
         }
         
         // stage('Configure aws') {
