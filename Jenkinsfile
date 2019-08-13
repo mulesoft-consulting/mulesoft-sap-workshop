@@ -11,7 +11,6 @@ pipeline {
         stage('Build Site') {
             steps {
                 configFileProvider([configFile(fileId: "sap-workshop.yaml", replaceTokens: true, targetLocation: './sap-workshop.yaml')]) {
-                    sh 'rm -rf ./.cache/antora'
                     sh 'antora --fetch sap-workshop.yaml'
                 }
             }
@@ -50,7 +49,8 @@ pipeline {
                     sh 'cp "$PEM_FILE" .'
                     sh 'echo "pem copied."'
                     sh 'chmod 400 ./se-team.pem'
-                    sh 'scp -o "StrictHostKeyChecking no" -r -i ./se-team.pem ./build/site ec2-user@34.227.143.105:/usr/share/nginx'
+                    sh 'ls -ltrh build/site'
+                    sh 'scp -o "StrictHostKeyChecking no" -r -i ./se-team.pem build/site ec2-user@34.227.143.105:/usr/share/nginx'
                 }
             }
         }
