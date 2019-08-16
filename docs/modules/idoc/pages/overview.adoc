@@ -1,5 +1,10 @@
-IDOC Overview
-=============
+= SAP IDoc Overview
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+// Settings
+:idprefix:
+:idseparator: -
 
 This guide shows how to connect to SAP for IDOC Integrations using the MuleSoft Anypoint Studio7.x  and the SAP Connector. This assumes you have access to an SAP R3 or S4 instance for this guide.
 
@@ -13,9 +18,7 @@ Software Requirements:
 **	SAP R3 ECC or S4 HANA
 **	SAP JCo Library
 
-Setup SAP Connector
-^^^^^^^^^^^^^^^^^^^
-
+== Setup SAP Connector
 
 1.1	Right-click on the src/main/resources folder and open the file app.properties
 
@@ -30,7 +33,6 @@ image:Image%20Files/IDOC%20Step%20Images/IDOC1.2.png[]
 *	sap.jcoGwService=3300
 *	sap.jcoProgramId=MULE_LAB
 *	sap.jcoConnectionCount=2
-
 
 The property corresponds to the Program ID you setup on your instance in Step 2.4 from the setup guide.
 
@@ -62,8 +64,6 @@ Click on Test Connection to make sure eveything has been configured correctly be
 1.6	Back in the Mule properties tab for Document source, fill in the fields with the corresponding property placeholders below.
 image:Image%20Files/IDOC%20Step%20Images/IDOC.1.6.png[]
 
-
-
 |=======================
 |Key|Value
 |Operation timeout:|200
@@ -75,12 +75,7 @@ image:Image%20Files/IDOC%20Step%20Images/IDOC.1.6.png[]
 
 image:Image%20Files/IDOC%20Step%20Images/IDOC.1.7.png[]
 
-
-
-
-
-Configure File Connector
-^^^^^^^^^^^^^^^^^^^^^^^^
+== Configure File Connector
 
 2.1	Now that we’ve configured the SAP Connector, let’s complete the rest of the flow to process the event and write the IDOC to a folder.
 image:Image%20Files/IDOC%20Step%20Images/IDOC2.1.png[]
@@ -119,10 +114,7 @@ image:Image%20Files/IDOC%20Step%20Images/IDOC2.7.png[]
 
 image:Image%20Files/IDOC%20Step%20Images/IDOC2.8.png[]
 
-
-
-Test Application
-^^^^^^^^^^^^^^^^
+== Test Application
 
 3.1	Right-click on the canvas and select Run project workshop-sap
 

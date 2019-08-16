@@ -3,17 +3,11 @@ pipeline {
         label 'antora-asciidoc'
     }
     
-    environment {
-        AWS_CREDS = credentials('62c5e723-0bb8-4095-b1e1-9b07330c5c01')
-    }
-
     stages {
         stage('Build Site') {
             steps {
-                configFileProvider([configFile(fileId: "sap-workshop.yaml", replaceTokens: true, targetLocation: './sap-workshop.yaml')]) {
-                    sh 'antora sap-workshop.yaml'
+                    sh 'antora --fetch sap-workshop.yaml'
                 }
-            }
         }
         
         // stage('Configure aws') {
@@ -49,7 +43,8 @@ pipeline {
                     sh 'cp "$PEM_FILE" .'
                     sh 'echo "pem copied."'
                     sh 'chmod 400 ./se-team.pem'
-                    sh 'scp -o "StrictHostKeyChecking no" -r -i ./se-team.pem ./build/site ec2-user@34.227.143.105:/usr/share/nginx'
+                    sh 'ls -ltrh build/site'
+                    sh 'scp -o "StrictHostKeyChecking no" -r -i ./se-team.pem build/site ec2-user@34.227.143.105:/usr/share/nginx'
                 }
             }
         }
