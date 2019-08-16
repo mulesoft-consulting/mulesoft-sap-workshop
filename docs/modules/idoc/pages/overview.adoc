@@ -43,8 +43,6 @@ image:IDOC1.3.png[]
 
 1.4	In the Document source module, click on the green plus sign to configure the Connector configuration
 
-image:IDOC1.4.png[]
-
 
 1.5	Back in the SAP Inbound window, all the required libraries should be green now.
 
