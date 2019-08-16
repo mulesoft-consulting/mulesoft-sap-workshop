@@ -6,7 +6,7 @@ endif::[]
 :idprefix:
 :idseparator: -
 
-This is the automatic start page for version *{page-component-version}* of Component B.
+
 
 **W**elcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of guides that will provide you
 hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform.
