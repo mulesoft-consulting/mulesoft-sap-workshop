@@ -1,10 +1,5 @@
-= SAP IDoc Overview
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-// Settings
-:idprefix:
-:idseparator: -
+IDOC Overview
+=============
 
 This guide shows how to connect to SAP for IDOC Integrations using the MuleSoft Anypoint Studio7.x  and the SAP Connector. This assumes you have access to an SAP R3 or S4 instance for this guide.
 
@@ -18,37 +13,37 @@ Software Requirements:
 **	SAP R3 ECC or S4 HANA
 **	SAP JCo Library
 
-== Setup SAP Connector
+Setup SAP Connector
+^^^^^^^^^^^^^^^^^^^
+
 
 1.1	Right-click on the src/main/resources folder and open the file app.properties
 
-image:IDOC1.1.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC1.1.png[]
 
 
 We need to add some additional properties to this file.
 1.2	Paste the following lines into the file:
-
-image:IDOC1.2.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC1.2.png[]
 
 *	sap.jcoGwHost=sapprod.tools.mulesoft.com
 *	sap.jcoGwService=3300
 *	sap.jcoProgramId=MULE_LAB
 *	sap.jcoConnectionCount=2
 
+
 The property corresponds to the Program ID you setup on your instance in Step 2.4 from the setup guide.
 
 1.3	Next, from the Mule Palette, select the SAP Connector. Drag and drop Document source on to the canvas
-
-image:IDOC1.3.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC1.3.png[]
 
 1.4	In the Document source module, click on the green plus sign to configure the Connector configuration
-
-image:IDOC1.4.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC1.4.png[]
 
 
 1.5	Back in the SAP Inbound window, all the required libraries should be green now.
 
-image:IDOC1.5.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC1.5.png[]
 
 Fill in the remaining fields with the corresponding property placeholders below.
 
@@ -65,8 +60,9 @@ Fill in the remaining fields with the corresponding property placeholders below.
 Click on Test Connection to make sure eveything has been configured correctly before clicking on OK.
 
 1.6	Back in the Mule properties tab for Document source, fill in the fields with the corresponding property placeholders below.
+image:Image%20Files/IDOC%20Step%20Images/IDOC.1.6.png[]
 
-image:IDOC.1.6.png[]
+
 
 |=======================
 |Key|Value
@@ -77,64 +73,68 @@ image:IDOC.1.6.png[]
 |Connection count:|${sap.jcoConnectionCount}
 |=======================
 
-image:IDOC.1.7.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC.1.7.png[]
 
-== Configure File Connector
+
+
+
+
+Configure File Connector
+^^^^^^^^^^^^^^^^^^^^^^^^
 
 2.1	Now that we’ve configured the SAP Connector, let’s complete the rest of the flow to process the event and write the IDOC to a folder.
-
-image:IDOC2.1.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC2.1.png[]
 
 For logging purposes, let’s drag and drop a Logger into flow.
 
 2.2
 In the Mule Properties view for the Logger, enter the following into the Message field
-
-image:IDOC2.2.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC2.2.png[]
 
 #
 [payload]
 2.3	In the Mule Palette, click on Add Modules and drag and drop the File module to where it says Drag and drop here to add to project.
-
-image:IDOC2.3.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC2.3.png[]
 
 
 2.4	Select the File module and then select the Write operation and drag and drop that into the canvas. Place it after the Logger component.
-image:IDOC2.4.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC2.4.png[]
 
 2.5	Before we setup the Write operation, let’s create a file placeholder in the src/main/resources folder of the project where the IDOC will be written to.
 
-image:IDOC2.5.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC2.5.png[]
 
 
 Right click on the src/main/resources folder and select New > File.
 
 2.6 Give the file a name (e.g. debmas.xml) and click on Finish
 
-image:IDOC.2.6.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC.2.6.png[]
 
 2.7	Back in the Mule properties tab for the Write operation, click on the Browse button next to the Path field in the General section.
-
-image:IDOC2.7.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC2.7.png[]
 
 
 2.8	Navigate to and select the file you created and then click on Open
 
-image:IDOC2.8.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC2.8.png[]
 
-== Test Application
+
+
+Test Application
+^^^^^^^^^^^^^^^^
 
 3.1	Right-click on the canvas and select Run project workshop-sap
 
-image:IDOC3.1.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC3.1.png[]
 
 3.2	In SAP GUI, enter in SAP transaction code BD12
 
-image:IDOC3.2.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC3.2.png[]
 
 3.3	Enter a customer ID in the Customer field. If you don’t have one, you can use transaction code XD03
 
-image:IDOC3.3.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC3.3.png[]
 
 
 In the Output type field, enter DEBMAS
@@ -143,20 +143,19 @@ In the Logical system field, select the Logical System that was setup as the rec
 
 3.4	Click on Execute to send the IDoc to Mule.
 
-image:IDOC3.4.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC3.4.png[]
 
 3.5	If configured successfully, you should see two Information windows. One is for the setup of the IDoc for the customer, the second is the outbound processing of the IDoc to be sent to the JCo Server.
 
-image:IDOC3.5.a.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC3.5.a.png[]
 
-image:IDOC3.5.b.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC3.5.b.png[]
 
 
 3.6	Back in Anypoint Studio, in the Console tab, you should see the Logger output the IDoc for the customer.
-
-image:IDOC3.6.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC3.6.png[]
 
 
 3.7	Lastly, a file should also be created where you configured the Path field in the File Connector.
 
-image:IDOC3.7.png[]
+image:Image%20Files/IDOC%20Step%20Images/IDOC3.7.png[]

@@ -6,7 +6,7 @@ endif::[]
 :idprefix:
 :idseparator: -
 
-This is version *{page-component-version}* of Module One in Component B. Welcome to the SAp Workshop.
+
 
 There is no additional configuration required for standard BAPI integration other than ensuring the SAP user configured within the SAP Connector has sufficient roles/privileges for accessing and invoking the desired BAPIs.
 
@@ -29,11 +29,13 @@ Please use this guide as a reference. Your SAP instance may be configured differ
 The first step is to create a RFC destination. The RFC destination is a symbolic name that is used to direct events to a target system masking the Program ID. The target system in this case is the MuleSoft SAP Connector which acts as an inbound endpoint to receive IDocs and Functions over RFC. The Program ID is configured in both the SAP GUI and the SAP Connector.
 
 1.1
+
 image:RFC1.1.png[]
 
 1.1 Enter in SAP transaction code *SM59*
 
 1.2
+
 image:RFC1.2.png[]
 
 1. Expand the *TCP/IP connections* node
@@ -41,6 +43,7 @@ image:RFC1.2.png[]
 2. Click on the *New* icon.
 
 1.3
+
 image:RFC1.3.png[]
 
 1. Enter a name in the *RFC Destination* field.
@@ -52,6 +55,7 @@ For the *Connection Type* field, enter a *T*
 2. Click on the *Save* icon
 
 1.4
+
 image:RFC1.4.png[]
 
 1. Under the *Activation Type* section, check the *Registered Server Program* radio button.
@@ -63,6 +67,7 @@ e.g. MULE_LAB
 3. Click on *Save*
 
 1.5
+
 image:RFC1.5.png[]
 
 Click on the yellow circle to exit and return to the SAP Easy Access screen.
@@ -72,11 +77,13 @@ Click on the yellow circle to exit and return to the SAP Easy Access screen.
 The next step is to create a port for IDoc processing. A port identifies where to send messages and will be linked to the RFC destination that you created in the previous step (e.g. MULE_LAB)
 
 2.1
+
 image:RFC2.1.png[]
 
 Enter in SAP transaction code *WE21*
 
 2.2
+
 image:RFC2.2.png[]
 
 1. Expand the *Transactional RFC* node.
@@ -84,11 +91,13 @@ image:RFC2.2.png[]
 2. Click on the *New* icon.
 
 2.3
+
 image:RFC2.3.png[]
 
 Leave the *Generate port name* radio button selected and click on the *Green* check mark button.
 
 2.4
+
 image:RFC2.4.png[]
 
 1. Fill in the *Description* field
@@ -104,6 +113,7 @@ e.g. MULE_LAB
 e.g. A000000054
 
 2.5
+
 image:RFC2.5.png[]
 
 Click on the yellow circle to exit and return to the SAP Easy Access screen.
@@ -115,11 +125,13 @@ Logical Systems are the unique IDs that represent participating systems in a dis
 Your instance should already have a Logical System setup for SAP and assigned to the client. You will have to either create a new Logical System for Mule, or leverage an existing one in the system. This will represent the MuleSoft SAP Connector to either function as an inbound or outbound endpoint.
 
 3.1
+
 image:RFC3.1.png[]
 
 Enter in SAP transaction code *SALE*
 
 3.2
+
 image:RFC3.2.png[]
 
 Expand *Basic Settings > Logical Systems*
@@ -127,11 +139,13 @@ Expand *Basic Settings > Logical Systems*
 Click on the icon next to *Assign Logical System to Client*
 
 3.3
+
 image:RFC3.3.png[]
 
 If the *Information* window pops up, click on the *Green* check mark button to proceed.
 
 3.4
+
 image:RFC3.4.png[]
 
 Find your Client ID number in the list and click on the Details icon.
@@ -139,6 +153,7 @@ Find your Client ID number in the list and click on the Details icon.
 e.g. 800
 
 3.5
+
 image:RFC3.5.png[]
 
 Find your Client ID number in the list and click on the Details icon.
@@ -146,6 +161,7 @@ Find your Client ID number in the list and click on the Details icon.
 e.g. 800
 
 3.6
+
 image:RFC3.6.png[]
 
 Take note of the *Logical system* field.
@@ -153,11 +169,13 @@ Take note of the *Logical system* field.
 e.g. T90CLNT090
 
 3.7
+
 image:RFC3.7.png[]
 
 Click on the yellow circle to exit and go back up a level.
 
 3.8
+
 image:RFC3.8.png[]
 
 In the *Display IMG* screen, click on the icon next to *Define Logical System*
@@ -166,18 +184,23 @@ In the *Display IMG* screen, click on the icon next to *Define Logical System*
 If the *Information* window pops up, click on the *Green* check mark button to proceed.
 
 3.9
+
 image:RFC3.9.png[]
 
 If you have permission to create new Logical System, click on *New Entries*.
 
 3.10
+
 image:RFC3.10.png[]
+
 Otherwise, take note of a Logical System from the list.
 
 e.g. APOCLNT810
 
 3.11
+
 image:RFC3.11.png[]
+
 Click on the yellow circle to exit and return to the SAP Easy Access screen.
 
 == 4. Use or Create a Partner Profile - WE20
@@ -187,11 +210,13 @@ Partner profiles are a prerequisite for data exchange. This involves defining wh
 The partner profiles you use (or create) are tied to the Logical Systems from the previous step. Generally, the Logical System for the client should already exist.
 
 4.1
+
 image:RFC4.1.png[]
 
 Enter in SAP transaction code *WE20*
 
 4.2
+
 image:RFC4.2.png[]
 
 1. Expand the *Partner Type LS* node.
@@ -209,6 +234,7 @@ e.g. APOCLNT810
 4. Click on *Save*
 
 4.3
+
 image:RFC4.3.png[]
 
 In the Partner Profile, click on *Create inbound parameter* in the Inbound parmtrs. section.
@@ -216,6 +242,7 @@ In the Partner Profile, click on *Create inbound parameter* in the Inbound parmt
 For the purposes of this guide, you'll just be adding one message type (DEBMAS) but you can add as many here as needed.
 
 4.4
+
 image:RFC4.4.png[]
 
 1. In the Message type field, enter the following:
@@ -231,6 +258,7 @@ image:RFC4.4.png[]
 4. Click on *Back*
 
 4.5
+
 image:RFC4.5.png[]
 
 Back on the Partner Profiles screen, click on *Create outbound parameter* under the *Outbound parmtrs.* section.
@@ -238,6 +266,7 @@ Back on the Partner Profiles screen, click on *Create outbound parameter* under 
 For the purposes of this guide, you'll just be adding one message type (DEBMAS) but you can add as many here as needed.
 
 4.6
+
 image:RFC4.6.png[]
 
 In the *Message Type* field, enter the following:
@@ -252,6 +281,7 @@ In the *Outbound Options* tab, click on the *Receiver port* field.
 You can either type in the *Port* you created in *Step 3* or click on the icon to the right of the field.
 
 4.8
+
 image:RFC4.8.png[]
 
 If you clicked to search for the port, you’ll be presented with the *Receiver port* screen.
@@ -259,6 +289,7 @@ If you clicked to search for the port, you’ll be presented with the *Receiver 
 Find and select the port and click on the *Green* check mark.
 
 4.9
+
 image:RFC4.9.png[]
 
 1. Under the *Output Mode* section, select the *Transfer IDoc Immed.* radio button.
@@ -268,12 +299,15 @@ image:RFC4.9.png[]
 *DEBMAS03*
 
 4.10
+
 image:RFC4.10.png[]
 
 Click on *Save*
 
 4.11
+
 image:RFC4.11.png[]
+
 Click on the yellow circle to exit to the *Partner profiles* screen and then click it again to return to the SAP Easy Access screen.
 
 == 5. Create a Distribution Model - BD64
@@ -281,21 +315,25 @@ Click on the yellow circle to exit to the *Partner profiles* screen and then cli
 A distribution model is used to describe the ALE message flow between logical systems. In the case of this workshop, the SAP Client and the MuleSoft SAP Connector. Business objects are distributed to connected recipients according to a unique distribution model that can contain rules of varying complexity depending on the type of business objects involved.
 
 5.1
+
 image:RFC5.1.png[]
 
 Enter in SAP transaction code *BD64*
 
 5.2
+
 image:RFC5.2.png[]
 
 Click on the *Switch between display and edit* mode icon.
 
 5.3
+
 image:RFC5.3.png[]
 
 Click on *Create model view*
 
 5.4
+
 image:RFC5.4.png[]
 
 In the *Create Model View* window, fill in the *Short* text field and the  *Technical name* field
@@ -305,11 +343,13 @@ e.g. Mule Lab Model / ML_MODEL
 Click on the *Green* check mark to save your changes.
 
 5.5
+
 image:RFC5.5.png[]
 
 Highlight the newly created model view at the bottom of the list.
 
 5.6
+
 image:RFC5.6.png[]
 
 Click on *Add message type*
@@ -317,6 +357,7 @@ Click on *Add message type*
 For the purposes of this guide, you'll just be adding one message type (DEBMAS). If more are required, you would repeat this step.
 
 5.7
+
 image:RFC5.7.png[]
 
 In the *Add Message Type* window, enter data in the following fields:
@@ -332,16 +373,19 @@ In the *Add Message Type* window, enter data in the following fields:
 *Message Type : DEBMAS*
 
 5.8
+
 image:RFC5.8.png[]
 
 The model view should look like the following screen.
 
 5.9
+
 image:RFC5.9.png[]
 
 Click on *Save*
 
 5.10
+
 image:RFC5.10.png[]
 
 Click on the yellow circle to exit and return to the SAP Easy Access screen.

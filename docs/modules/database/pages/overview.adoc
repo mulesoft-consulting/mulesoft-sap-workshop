@@ -7,7 +7,6 @@ endif::[]
 :idseparator: -
 
 
-Welcome to the SAP Workshop.
 
 This guide shows how to connect to a SAP HANA Database using the MuleSoft Anypoint Studio7.x  and the Database Connector. This assumes you have access to a SAP HANA database for this guide. There is an instance that is referenced in this guide but connection information may have changed. Please refer to your instructor for more details.
 
