@@ -99,6 +99,7 @@ image:IDOC2.3.png[]
 
 
 2.4	Select the File module and then select the Write operation and drag and drop that into the canvas. Place it after the Logger component.
+
 image:IDOC2.4.png[]
 
 2.5	Before we setup the Write operation, let’s create a file placeholder in the src/main/resources folder of the project where the IDOC will be written to.
