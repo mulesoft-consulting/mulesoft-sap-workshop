@@ -66,6 +66,7 @@ Click on Test Connection to make sure eveything has been configured correctly be
 
 1.6	Back in the Mule properties tab for Document source, fill in the fields with the corresponding property placeholders below.
 
+
 image:IDOC.1.6.png[]
 
 |=======================
