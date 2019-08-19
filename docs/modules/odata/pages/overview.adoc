@@ -8,7 +8,7 @@ endif::[]
 
 
 
-This guide shows how to connect to a SAP OData API using the MuleSoft Anypoint Studio7.x  and the HTTP Connector. This assumes you have access to a SAP OData API for this guide. You will create a flow that uses the HTTP Connector that will proxy requests to the OData API.
+This guide shows how to connect to a SAP OData API using the MuleSoft Anypoint Studio7.x  and the HTTP Connector. This assumes you have access to a SAP OData API for this guide. You will create a flow that uses the HTTP Connector that will proxy requests to the https://api.sap.com/api/API_PRODUCT_SRV[OData API].
 
 == 1. Configure HTTP Listener
 

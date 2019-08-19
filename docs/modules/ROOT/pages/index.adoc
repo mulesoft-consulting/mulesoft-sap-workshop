@@ -26,9 +26,8 @@ This guide provides a overview on how to connect to OData datasources such as en
 
 image:Odata.png[]
 
-Reminder: The SAP Connector guide requires the use of your own SAP instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized Sandbox SAP.
+Reminder: The SAP Connector guide requires the use of your own SAP instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized https://idesremote.com/[Sandbox SAP].
 
-https://www.idesremote.com
 
 == Overview
 
