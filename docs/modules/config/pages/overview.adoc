@@ -12,7 +12,7 @@ There is no additional configuration required for standard BAPI integration othe
 
 If the standard functions do not meet your integration requirements, you will need to enlist an SAP ABAP developer to design and implement a custom function according to your needs. Function design is beyond the scope of this guide but remember to activate the BAPI function for it to be visible to the SAP Connector when it refreshes the metadata for DataSense.
 
-*Proceed to the BAPI Integration guide by clicking here.*
+*Proceed to the BAPI Integration guide by clicking xref:bapi:overview.adoc[here].*
 
 == SAP Configuration for IDOC Integration
 
