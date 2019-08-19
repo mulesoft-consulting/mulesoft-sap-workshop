@@ -10,7 +10,7 @@ endif::[]
 
 **W**elcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of guides that will provide you
 hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform.
-In order to complete these guides, you'll need a copy of Anypoint Studio 7.x which is free to download and install on your Windows, Mac, or Linux machine.
+In order to complete these guides, you'll need a copy of Anypoint Studio 7.x which is free to https://www.mulesoft.com/lp/dl/studio[download] and install on your Windows, Mac, or Linux machine.
 
 You can click on any of the items below to get started or read up more about integration options with MuleSoft on the Overview page.
 
