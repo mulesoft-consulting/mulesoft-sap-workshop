@@ -4,15 +4,15 @@ pipeline {
     }
 
     stages {
-        stage('Install Yarn') {
-            steps {
-                    sh 'npm i -g yarn'
-                    sh 'yarn install'
-                }
-        }
 
-    stages {
-        stage('Build Site') {
+      stage('Install Yarn') {
+          steps {
+                sh 'npm i -g yarn'
+                sh 'yarn install'
+          }
+      }
+
+      stage('Build Site') {
             steps {
                     sh 'antora --generator=@antora/site-generator-ms sap-workshop.yml'
                 }
