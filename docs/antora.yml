@@ -1,5 +1,6 @@
 name: sap
 title: MuleSoft SAP Workshop
+version: latest
 nav:
 - modules/ROOT/nav.adoc
 - modules/config/nav.adoc
