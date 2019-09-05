@@ -1,0 +1,7 @@
+{
+  "name": "sap-workshop",
+  "private": true,
+  "devDependencies": {
+    "@antora/site-generator-ms": "git+https://gitlab.com/opendevise/oss/antora-site-generator-ms#v0.0.5"
+  }
+}

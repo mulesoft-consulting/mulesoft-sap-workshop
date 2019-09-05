@@ -2,14 +2,22 @@ pipeline {
     agent {
         label 'antora-asciidoc'
     }
-    
+
+    stages {
+        stage('Install Yarn') {
+            steps {
+                    sh 'npm i -g yarn'
+                    sh 'yarn install'
+                }
+        }
+
     stages {
         stage('Build Site') {
             steps {
-                    sh 'antora --fetch sap-workshop.yaml'
+                    sh 'antora --generator=@antora/site-generator-ms sap-workshop.yml'
                 }
         }
-        
+
         // stage('Configure aws') {
         //     steps {
         //         sh 'export AWS_ACCESS_KEY_ID=$AWS_CREDS_USR'
@@ -18,7 +26,7 @@ pipeline {
         //         sh '$(aws ecr get-login --no-include-email --region us-east-1)'
         //     }
         // }
-        
+
         // stage('Build Docker Container') {
         //     steps {
         //         configFileProvider([configFile(fileId: "Dockerfile", replaceTokens: true, targetLocation: './Dockerfile')]) {
@@ -28,7 +36,7 @@ pipeline {
         //         }
         //     }
         // }
-        
+
         // stage('Publish Docker container') {
         //     steps {
         //         sh 'docker login repo.treescale.com -u demos_kb8 -p Mule1379'
@@ -36,7 +44,7 @@ pipeline {
         //         sh 'docker push 567617630570.dkr.ecr.us-east-1.amazonaws.com/sap-workshop:latest'
         //     }
         // }
-        
+
         stage('Copy site to server') {
             steps {
                 withCredentials([file(credentialsId: 'se-team.pem', variable: 'PEM_FILE')]){
@@ -50,4 +58,3 @@ pipeline {
         }
     }
 }
-
