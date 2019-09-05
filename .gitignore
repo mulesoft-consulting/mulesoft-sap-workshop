@@ -1,5 +1,7 @@
 .cache
 build
 .DS_Store
+yarn.lock
+node_modules
 
 

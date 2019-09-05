@@ -19,5 +19,5 @@ asciidoc:
 ui:
   bundle:
     #url: https://github.com/mulesoft/docs-site-antora-ui/releases/download/v314/ui-bundle.zip
-    url: https://github.com/mulesoft-consulting/workshops-site-antore-ui/raw/master/build/ui-bundle.zip
+    url: https://s3.amazonaws.com/apiled-workshop-4.2/antora/ui-bundle.zip
     snapshot: true
