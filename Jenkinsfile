@@ -14,7 +14,7 @@ pipeline {
 
       stage('Build Site') {
             steps {
-                    sh 'antora --generator=@antora/site-generator-ms sap-workshop.yml'
+                    sh 'antora --generator=@antora/site-generator-ms sap-workshop.yaml'
                 }
         }
 
