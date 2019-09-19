@@ -1,4 +1,4 @@
-= SAP HANA Database Connectivity
+= SAP S/4HANA Database Connectivity
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -8,7 +8,7 @@ endif::[]
 
 
 
-This guide shows how to connect to a SAP HANA Database using the MuleSoft Anypoint Studio7.x  and the Database Connector. This assumes you have access to a SAP HANA database for this guide. There is an instance that is referenced in this guide but connection information may have changed. Please refer to your instructor for more details.
+This guide shows how to connect to a SAP S/4HANA Database using the MuleSoft Anypoint Studio7.x  and the Database Connector. This assumes you have access to a SAP S/4HANA database for this guide. There is an instance that is referenced in this guide but connection information may have changed. Please refer to your instructor for more details.
 
 You will create a flow that uses the Database Connector and the https://dejim.s3.amazonaws.com/software/ngdbc.jar[JDBC Driver]. Additionally you will learn how to pass in URL parameters to the SQL Query to select specific records from a table.
 
@@ -70,7 +70,7 @@ image:HANA1.10.png[]
 image:HANA1.11.png[]
 
 
-1.12	Next, click on Configure for the JDBC Driver field to add the driver for SAP HANA.
+1.12	Next, click on Configure for the JDBC Driver field to add the driver for SAP S/4HANA.
 
 image:HANA1.12.png[]
 
@@ -98,7 +98,7 @@ URL: jdbc:sap://<host>:39015/?currentschema=<schema>&user=<user>&password=<passw
 
 Driver Class Name: com.sap.db.jdbc.Driver
 
-Here are configuration properties for a sandbox instance of SAP HANA if needed:
+Here are configuration properties for a sandbox instance of SAP S/4HANA if needed:
 
 * Host: 34.201.35.10
 * Schema: SAP_REST_API
@@ -107,7 +107,7 @@ Here are configuration properties for a sandbox instance of SAP HANA if needed:
 
 Click on Test Connection to make sure the credentials are correct. If it returns back a successful test, click on OK to continue.
 
-1.16	Back in the Select properties tab, (1) enter in a query for a table in your SAP HANA database. You can use the following if you’re using the sandbox instance.
+1.16	Back in the Select properties tab, (1) enter in a query for a table in your SAP S/4HANA database. You can use the following if you’re using the sandbox instance.
 
 image:HANA1.16.png[]
 
@@ -164,11 +164,11 @@ http://localhost:8082/records?id=2
 
 * MuleSoft Database Connector
 https://docs.mulesoft.com/connectors/db-connector-index
-* SAP HANA Tools
+* SAP S/4HANA Tools
 https://tools.hana.ondemand.com/#hanatools
-* How to create an SAP HANA Developer Edition in the Cloud
+* How to create an SAP S/4HANA Developer Edition in the Cloud
 https://www.sap.com/developer/tutorials/hana-setup-cloud.html
-* Getting started with SAP HANA Express
+* Getting started with SAP S/4HANA Express
 https://caldocs.hana.ondemand.com/caldocs/help/Getting_started_HANA_Express.pdf
-* Connect to SAP HANA using JDBC
+* Connect to SAP S/4HANA using JDBC
 https://www.sap.com/developer/tutorials/hxe-connect-hxe-using-jdbc.html

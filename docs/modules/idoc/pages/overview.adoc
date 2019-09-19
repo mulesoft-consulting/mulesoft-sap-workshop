@@ -15,7 +15,7 @@ This guide will show you how to use the SAP Connector as an IDOC Inbound Endpoin
 Software Requirements:
 
 **	Anypoint Studio 7.x
-**	SAP R3 ECC or S4 HANA
+**	SAP SAP ERP or S/4HANA
 **	SAP JCo Library
 
 == Setup SAP Connector
@@ -60,7 +60,7 @@ Fill in the remaining fields with the corresponding property placeholders below.
 |Login Language:|${sap.jcoLang}
 |=======================
 
-Click on Test Connection to make sure eveything has been configured correctly before clicking on OK.
+Click on Test Connection to make sure everything has been configured correctly before clicking on OK.
 
 1.6	Back in the Mule properties tab for Document source, fill in the fields with the corresponding property placeholders below.
 
