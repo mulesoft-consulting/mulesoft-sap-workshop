@@ -20,7 +20,7 @@ image:DBConnectorImage.png[]
 
 This guide will walk you through connecting with SAP using the SAP Connector which leverages the SAP JCo Library.
 
-image:SAPConnector.png[]
+image:SAPConnector2.png[]
 
 This guide provides a overview on how to connect to OData datasources such as endpoints exposed from SAP NetWeaver Gateway using the HTTP Connector.
 
