@@ -6,7 +6,7 @@ site:
   start_page: sap::index.adoc
 content:
   sources:
-  - url: https://github.com/djuang1/mulesoft-sap-workshop
+  - url: https://github.com/mulesoft-consulting/mulesoft-sap-workshop.git
     branches: master
     start_path: docs/
 
