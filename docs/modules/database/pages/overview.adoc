@@ -10,7 +10,7 @@ endif::[]
 
 This guide shows how to connect to a SAP S/4HANA Database using the MuleSoft Anypoint Studio7.x  and the Database Connector. This assumes you have access to a SAP S/4HANA database for this guide. There is an instance that is referenced in this guide but connection information may have changed. Please refer to your instructor for more details.
 
-You will create a flow that uses the Database Connector and the https://dejim.s3.amazonaws.com/software/ngdbc.jar[JDBC Driver]. Additionally you will learn how to pass in URL parameters to the SQL Query to select specific records from a table.
+You will create a flow that uses the Database Connector and the https://tools.hana.ondemand.com/additional/ngdbc-2.4.63.jar[JDBC Driver]. Additionally you will learn how to pass in URL parameters to the SQL Query to select specific records from a table.
 
 == 1. Connect and select all from a table
 
@@ -85,12 +85,12 @@ Click on Use local file
 image:HANA1.14.png[]
 
 
-If you don’t have the JDBC driver, you can download a copy from here.
+If you don’t have the JDBC driver, you can download a copy from https://tools.hana.ondemand.com/additional/ngdbc-2.4.63.jar[here].
 
 In the Advanced settings section, fill in the following fields:
 
 * Group ID: com.sap.db.jdbc
-* Version: 2.3.48
+* Version: 2.4.63
 
 1.15	Back in the Database Config window, use the following for the Connection configuration:
 
