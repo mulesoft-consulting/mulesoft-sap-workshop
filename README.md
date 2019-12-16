@@ -1,5 +1,7 @@
 # MuleSoft SAP Workshop
 
-Refresh of the SAP Workshop from Google Sites
+Refresh of the SAP Workshop for Mule 4.x from Google Sites
 
-HW - adding a change to get the flow.
+http://sap.workshop.tools.mulesoft.com/
+
+

@@ -1,4 +1,4 @@
-= SAP Workshop for Mule 4.x
+= MuleSoft SAP Workshop for Mule 4.x
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,17 +6,23 @@ endif::[]
 :idprefix:
 :idseparator: -
 
+Welcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of guides that will provide you hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform.
 
+[width="75%", adoc]
+|===
 
-**W**elcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of guides that will provide you
-hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform.
-In order to complete these guides, you'll need a copy of Anypoint Studio 7.x which is free to https://www.mulesoft.com/lp/dl/studio[download] and install on your Windows, Mac, or Linux machine.
+a| **Prerequisites**
 
-You can click on any of the items below to get started or read up more about integration options with MuleSoft on the Overview page.
+* Anypoint Studio (https://www.mulesoft.com/lp/dl/studio[Download])
+* SAP Connector 5.0
+* SAP ECC R3 or S/4 HANA Instance
+|===
+
+In order to complete these guides, you'll need a copy of Anypoint Studio 7.4.x which is free to https://www.mulesoft.com/lp/dl/studio[download] and install on your Windows, Mac, or Linux machine.
 
 [width="100%"]
 |=======
-|HANA Database |SAP |OData
+|**Database** |**SAP JCo** |**OData**
 |image:DBConnectorImage.png[] |image:SAPConnector2.png[] |image:Odata.png[]
 |This guide will walk you through the process of connecting with an SAP S/4HANA Database. |This guide will walk you through connecting with SAP using the SAP Connector which leverages the SAP JCo Library. |This guide provides a overview on how to connect to OData datasources such as endpoints exposed from SAP NetWeaver Gateway using the HTTP Connector.
 |=======
