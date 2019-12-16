@@ -5,5 +5,5 @@
 ** xref:idoc:overview.adoc[SAP IDocs]
 ** xref:database:overview.adoc[SAP HANA Database]
 ** xref:odata:overview.adoc[SAP OData]
-* Glossary
+* xref::glossary.adoc[Glossary]
 * Resources

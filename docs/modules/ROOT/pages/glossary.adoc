@@ -1,0 +1,15 @@
+= Glossary
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+// Settings
+:idprefix:
+:idseparator: -
+
+* *ABAP* – Advanced Business Application Programming is a high level programming language created by SAP.
+* *BAPI* – business application programming interface is a defined interface that can be used by SAP and non-SAP applications to perform data operations on SAP data.
+* *ERP* – Enterprise Resource Planning software used by businesses to manage a variety of functions including Finance, Manufacturing, Logistics, Supply Chain, etc..  SAP’s ERP suite has a number of modules that address these different functions.
+* *IDocs* – Intermediate Document interface – just like BAPI this is an interface with a defined document format for transferring data within SAP and non-SAP applications.
+* *MuleSoft SAP Connector* – aka our SAP JCO connector that in combination with our MuleSoft Integration Runtime allows for bi-directional connectivity between SAP SAP ERP and S/4HANA and other applications like CRM (e.g., SFDC).
+* *RFC* – Remote Function Call – just like iDocs this is an interface for communication between SAP and other SAP or third-party compatible applications.
+* *SAP Java Connector (SAP JCo)* - a middleware component that enables the development of SAP-compatible components and applications in Java. SAP JCo supports communication with the SAP Server in both directions: inbound calls (Java calls ABAP) and outbound calls (ABAP calls Java).
