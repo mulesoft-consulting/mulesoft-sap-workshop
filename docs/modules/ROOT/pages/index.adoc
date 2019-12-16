@@ -8,6 +8,8 @@ endif::[]
 
 Welcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of guides that will provide you hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform.
 
+:halign: left
+:valign: top
 [width="75%", adoc]
 |===
 
