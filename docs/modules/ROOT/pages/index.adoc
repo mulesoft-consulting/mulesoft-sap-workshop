@@ -6,7 +6,7 @@ endif::[]
 :idprefix:
 :idseparator: -
 
-Welcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of guides that will provide you hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform.
+Welcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of modules that will provide you hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform. We'll walk you through connecting to SAP HANA Database, SAP S/4 HANA Cloud, and SAP ECC R/3 using our various connectivity solutions.
 
 :halign: left
 :valign: top
@@ -24,13 +24,18 @@ In order to complete these guides, you'll need a copy of Anypoint Studio 7.4.x w
 
 [width="100%"]
 |=======
-|**Database** |**SAP JCo** |**OData**
-|image:DBConnectorImage.png[] |image:SAPConnector2.png[] |image:Odata.png[]
-|This guide will walk you through the process of connecting with an SAP S/4HANA Database. |This guide will walk you through connecting with SAP using the SAP Connector which leverages the SAP JCo Library. |This guide provides a overview on how to connect to OData datasources such as endpoints exposed from SAP NetWeaver Gateway using the HTTP Connector.
+|**S/4 HANA Database** |**SAP R/3 ECC / S/4 HANA On-Premises** | **SAP S/4 Cloud** |**HTTP REST / OData API**
+|image:DBConnectorImage.png[] |image:SAPConnector2.png[] | image:SAPConnector2.png[] |image:Odata.png[]
+|This module will walk you through the process of connecting with an SAP S/4 HANA Database. 
+|This module will walk you through connecting with SAP using the SAP Connector which leverages the SAP JCo Library. The JCo library works with both R/3 ECC and S/4 HANA on-premises.
+|This module provides a overview on how to connect SAP S/4 Cloud using the SAP S/4 Cloud connector.
+|This module provides a overview on how to connect to OData datasources such as endpoints exposed from SAP NetWeaver Gateway using the HTTP Connector.
 |=======
 
-Reminder: The SAP Connector guide requires the use of your own SAP instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized https://idesremote.com/[Sandbox SAP].
-
+[NOTE]
+====
+The SAP Connector module requires the use of your own SAP instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized https://idesremote.com/[Sandbox SAP].
+====
 
 == Overview
 
