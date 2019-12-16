@@ -6,6 +6,8 @@ endif::[]
 :idprefix:
 :idseparator: -
 
+== Overview
+
 Welcome to the MuleSoft SAP Workshop for Mule 4.x. This workshop consists of a set of modules that will provide you hands-on experience with connecting with SAP using a variety of methods provided through the Anypoint Platform. We'll walk you through connecting to SAP HANA Database, SAP S/4 HANA Cloud, and SAP ECC R/3 using our various connectivity solutions.
 
 :halign: left
@@ -17,7 +19,7 @@ a| **Prerequisites**
 
 * Anypoint Studio (https://www.mulesoft.com/lp/dl/studio[Download])
 * SAP Connector 5.0
-* SAP ECC R3 or S/4 HANA Instance
+* SAP ECC R3 and/or S/4 HANA Cloud Instance
 |===
 
 In order to complete these guides, you'll need a copy of Anypoint Studio 7.4.x which is free to https://www.mulesoft.com/lp/dl/studio[download] and install on your Windows, Mac, or Linux machine.
@@ -34,16 +36,14 @@ In order to complete these guides, you'll need a copy of Anypoint Studio 7.4.x w
 
 [NOTE]
 ====
-The SAP Connector module requires the use of your own SAP instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized https://idesremote.com/[Sandbox SAP].
+The SAP Connector module requires the use of your own SAP ECC R/3 or SAP S/4 HANA On-Premises instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized https://idesremote.com/[Sandbox SAP].
 ====
 
-== Overview
+== SAP Integration & API Strategy
 
 SAP is one of the most popular enterprise resource planning (ERP) solutions available on the market today. Businesses looking to fully harness the power of SAP often wish to integrate it with other applications such as client relationship management (CRM) applications, creating end-to-end processes across the applications, on-premise or in the cloud.
 
 With MuleSoft, customers can deliver integrations quickly, easily, and cost effectively in order to integrate SAP solutions with other systems in the enterprise using our library of connectors.
-
-== SAP Integration & API Strategy
 
 There are a number of different design patterns that can be leveraged to integrate with SAP, the decision criteria for choosing one pattern over another include SAP development time, MuleSoft development time, NetWeaver Gateway risk assessment, and account maintenance/visibility.
 

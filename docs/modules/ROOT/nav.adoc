@@ -1,5 +1,6 @@
-* xref::index.adoc[Welcome]
-* xref:config:overview.adoc[SAP Configuration]
+* xref::index.adoc[Overview]
+* xref:config:overview.adoc[SAP Setup]
+
 * Modules
 ** BAPI
 *** BAPI Inbound
@@ -10,5 +11,6 @@
 ** xref:database:overview.adoc[S/4 HANA Database]
 ** xref:odata:overview.adoc[S/4 HANA Cloud]
 *** OData
+
 * xref::glossary.adoc[Glossary]
 *  xref::resources.adoc[Resources]
