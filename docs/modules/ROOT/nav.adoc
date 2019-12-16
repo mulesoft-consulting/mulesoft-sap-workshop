@@ -1,9 +1,14 @@
 * xref::index.adoc[Welcome]
 * xref:config:overview.adoc[SAP Configuration]
 * Modules
-** xref:bapi:overview.adoc[SAP BAPIs]
-** xref:idoc:overview.adoc[SAP IDocs]
-** xref:database:overview.adoc[SAP HANA Database]
-** xref:odata:overview.adoc[SAP OData]
+** BAPI
+*** BAPI Inbound
+*** xref:bapi:overview.adoc[BAPI Outbound]
+** IDoc
+*** xref:idoc:overview.adoc[IDoc Inbound]
+*** IDoc Outbound
+** xref:database:overview.adoc[S/4 HANA Database]
+** xref:odata:overview.adoc[S/4 HANA Cloud]
+*** OData
 * xref::glossary.adoc[Glossary]
-* Resources
+*  xref::resources.adoc[Resources]
