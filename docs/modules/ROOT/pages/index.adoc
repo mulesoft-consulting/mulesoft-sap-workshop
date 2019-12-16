@@ -14,17 +14,12 @@ In order to complete these guides, you'll need a copy of Anypoint Studio 7.x whi
 
 You can click on any of the items below to get started or read up more about integration options with MuleSoft on the Overview page.
 
-This guide will walk you through the process of connecting with an SAP S/4HANA Database.
-
-image:DBConnectorImage.png[]
-
-This guide will walk you through connecting with SAP using the SAP Connector which leverages the SAP JCo Library.
-
-image:SAPConnector2.png[]
-
-This guide provides a overview on how to connect to OData datasources such as endpoints exposed from SAP NetWeaver Gateway using the HTTP Connector.
-
-image:Odata.png[]
+[width="100%"]
+|=======
+|HANA Database |SAP |OData
+|image:DBConnectorImage.png[] |image:SAPConnector2.png[] |image:Odata.png[]
+|This guide will walk you through the process of connecting with an SAP S/4HANA Database. |This guide will walk you through connecting with SAP using the SAP Connector which leverages the SAP JCo Library. |This guide provides a overview on how to connect to OData datasources such as endpoints exposed from SAP NetWeaver Gateway using the HTTP Connector.
+|=======
 
 Reminder: The SAP Connector guide requires the use of your own SAP instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized https://idesremote.com/[Sandbox SAP].
 
