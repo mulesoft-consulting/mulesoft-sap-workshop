@@ -1,4 +1,4 @@
-= SAP Configuration
+= SAP Setup for Outbound Communication (Optional)
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -6,25 +6,20 @@ endif::[]
 :idprefix:
 :idseparator: -
 
+There are some configurations that need to be setup on your SAP instance for outbound communication. These configurations allow MuleSoft to register and act as a partner system waiting for messages from the SAP system. 
 
-
-There is no additional configuration required for standard BAPI integration other than ensuring the SAP user configured within the SAP Connector has sufficient roles/privileges for accessing and invoking the desired BAPIs.
-
-If the standard functions do not meet your integration requirements, you will need to enlist an SAP ABAP developer to design and implement a custom function according to your needs. Function design is beyond the scope of this guide but remember to activate the BAPI function for it to be visible to the SAP Connector when it refreshes the metadata for DataSense.
-
-*Proceed to the BAPI Integration guide by clicking xref:bapi:overview.adoc[here].*
-
-== SAP Configuration for IDOC Integration
-
-Before proceeding with the SAP Connector guide, there are some configurations that need to be setup on your SAP instance for IDOC Integration. These configurations allow MuleSoft to register and act as a partner system. The external application then runs in a server mode, waiting for messages from the SAP system.
+The modules in this workshop that walkthrough inbound communication with MuleSoft (BAPI Inbound, xref:idoc:overview.adoc[IDoc Inbound]) are dependent on these configurations. If you are unable to configure SAP according to these steps, you can skip those modules.
 
 Please use this guide as a reference. Your SAP instance may be configured differently and have restrictions that prevent you from completing the guide fully. If you run into issues on the SAP side, please contact your SAP Administrator.
 
 == Overview
 
-*Reminder*: This guide requires the use of your own SAP instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized Sandbox SAP.
+[NOTE]
+====
+Reminder: The SAP Connector module requires the use of your own SAP ECC R/3 or SAP S/4 HANA On-Premise instance. If you don’t have one, you can leverage a hosted SAP service. For the purposes of this guide, we utilized https://idesremote.com/[Sandbox SAP].
+====
 
-== 1. Create a RFC Destination - SM59
+== 1. SM59 - Create a RFC Destination
 
 The first step is to create a RFC destination. The RFC destination is a symbolic name that is used to direct events to a target system masking the Program ID. The target system in this case is the MuleSoft SAP Connector which acts as an inbound endpoint to receive IDocs and Functions over RFC. The Program ID is configured in both the SAP GUI and the SAP Connector.
 
