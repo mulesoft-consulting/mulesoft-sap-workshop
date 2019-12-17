@@ -20,15 +20,16 @@ a| **Prerequisites**
 * Anypoint Studio (https://www.mulesoft.com/lp/dl/studio[Download])
 * SAP Connector 5.0
 * SAP ECC R3 and/or S/4 HANA Cloud Instance
+* SAP HANA Database
 |===
 
 In order to complete these guides, you'll need a copy of Anypoint Studio 7.4.x which is free to https://www.mulesoft.com/lp/dl/studio[download] and install on your Windows, Mac, or Linux machine.
 
 [width="100%"]
 |=======
-|**S/4 HANA Database** |**SAP R/3 ECC / S/4 HANA On-Premises** | **SAP S/4 Cloud** |**HTTP REST / OData API**
+|**HANA Database** |**SAP R/3 ECC / S/4 HANA On-Premises** | **SAP S/4 Cloud** |**HTTP REST / OData API**
 |image:DBConnectorImage.png[] |image:SAPConnector2.png[] | image:Odata.png[] |image:Odata.png[]
-|This module will walk you through the process of connecting with an SAP S/4 HANA Database. 
+|This module will walk you through the process of connecting with an SAP HANA Database. 
 |This module will walk you through connecting with SAP using the SAP Connector which leverages the SAP JCo Library. The JCo library works with both R/3 ECC and S/4 HANA on-premises.
 |This module provides a overview on how to connect SAP S/4 Cloud using the SAP S/4 Cloud connector.
 |This module provides a overview on how to connect to OData datasources such as endpoints exposed from SAP NetWeaver Gateway using the HTTP Connector.
