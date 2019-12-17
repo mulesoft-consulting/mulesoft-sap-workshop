@@ -8,8 +8,8 @@
 ** 2. IDoc
 *** xref:idoc:overview.adoc[2.1 IDoc Inbound]
 *** 2.2 IDoc Outbound
-** xref:database:overview.adoc[3. HANA Database]
-** xref:odata:overview.adoc[4. S/4 HANA Cloud]
+** xref:odata:overview.adoc[3. S/4 HANA Cloud]
+** xref:database:overview.adoc[4. HANA Database]
 
 * xref::glossary.adoc[Glossary]
 *  xref::resources.adoc[Resources]
