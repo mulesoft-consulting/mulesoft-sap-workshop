@@ -30,7 +30,7 @@ We need to add some additional properties to this file.
 
 image:IDOC1.2.png[]
 
-*	sap.jcoGwHost=sapprod.tools.mulesoft.com
+*	sap.jcoGwHost=your-sap-host-or-ip.com
 *	sap.jcoGwService=3300
 *	sap.jcoProgramId=MULE_LAB
 *	sap.jcoConnectionCount=2
